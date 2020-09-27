@@ -9,8 +9,8 @@ Publish android library to [bintray](https://bintray.com/) (jcenter).
 In you project's `build.gradle`, inside the buildscript -> dependencies add:
 
 ```groovy
-classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:{$latest_version}"
-classpath "com.github.dcendents:android-maven-gradle-plugin:{$latest_version}"
+classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$latest_version"
+classpath "com.github.dcendents:android-maven-gradle-plugin:$latest_version"
 ```
 
 ### 2. set your bintray user keys _`locally`_
@@ -18,9 +18,9 @@ classpath "com.github.dcendents:android-maven-gradle-plugin:{$latest_version}"
 In your project's `local.properties`:
 
 ```groovy
-bintray.user={$user_name}
-bintray.apikey={$api_key}
-bintray.gpg.password={$password}
+bintray.user=$user_name
+bintray.apikey=$api_key
+bintray.gpg.password=$password
 ```
 
 ### 3. define the library-specific properties
@@ -29,19 +29,19 @@ In your library module's `build.gradle`, add:
 
 ```groovy
 ext {
-  bintrayRepo = "{$repo_name}"
-  bintrayName = "{$package_name}"
+  bintrayRepo = "$repo_name"
+  bintrayName = "$package_name"
 
-  publishedGroupId = "{$group_id}"
-  artifact = "{$artifact_id}"
+  publishedGroupId = "$group_id"
+  artifact = "$artifact_id"
 
-  libraryName = "{$library_name}"
-  libraryDescription = "{$library_description}"
-  libraryVersion = "{$library_version}"
+  libraryName = "$library_name"
+  libraryDescription = "$library_description"
+  libraryVersion = "$library_version"
 
-  gitUrl = "{$git_url}"
-  siteUrl = "{$site_url}"
-  issuesUrl = "{$issues_url}"
+  gitUrl = "$git_url"
+  siteUrl = "$site_url"
+  issuesUrl = "$issues_url"
 
   licenseName = "Apache License 2.0"
   licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
